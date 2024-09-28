@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
+import { cn } from "../../../../lib/utils";
 
-export const StudentItem = () => {
+type Props = {
+  active?: boolean;
+};
+
+export const StudentItem = ({ active }: Props) => {
   return (
     <li>
-      <Link className="bg-white/30 block p-4 rounded-3xl" to={"/"}>
+      <Link
+        className={cn(
+          "bg-white/30 block p-4 rounded-3xl",
+          active && "bg-gradient-to-tr from-[#f7ffd0] to-[#edff8c]"
+        )}
+        to={"/"}
+      >
         <div className="flex gap-x-4">
           <div className="size-10 rounded-full overflow-hidden">
             <img

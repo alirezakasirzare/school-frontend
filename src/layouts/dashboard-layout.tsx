@@ -6,7 +6,7 @@ export const DashboardLayout = () => {
   return (
     <div className="grow bg-[#d1d1d1]">
       <DashboardHeader />
-      <main className="flex dashboard-container gap-x-4">
+      <main className="flex dashboard-container gap-x-1">
         <div className="w-[200px] shrink-0">
           <DashboardSidebar />
         </div>

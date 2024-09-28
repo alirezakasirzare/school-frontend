@@ -24,9 +24,9 @@ export const StudentsList = () => {
         </div>
 
         {/* list */}
-        <ul className="pb-8 px-1 flex flex-col gap-y-1">
+        <ul className="pb-1 px-1 flex flex-col gap-y-1">
           <StudentItem />
-          <StudentItem />
+          <StudentItem active />
           <StudentItem />
           <StudentItem />
           <StudentItem />

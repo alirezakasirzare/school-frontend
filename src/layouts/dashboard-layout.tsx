@@ -10,7 +10,7 @@ export const DashboardLayout = () => {
         <div className="w-[200px] shrink-0">
           <DashboardSidebar />
         </div>
-        <div className="bg-white/50 w-full h-[600px]">
+        <div className="w-full">
           <Outlet />
         </div>
       </main>

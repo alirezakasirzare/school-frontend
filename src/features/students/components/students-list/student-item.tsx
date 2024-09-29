@@ -11,11 +11,17 @@ export const StudentItem = ({ active = false, to }: Props) => {
     <li>
       <Link
         className={cn(
-          "bg-white/30 block p-4 rounded-3xl transition-colors",
-          active && "bg-gradient-to-tr from-[#f7ffd0] to-[#edff8c]"
+          "bg-neutral-100/70 hover:bg-neutral-50/90 block p-4 rounded-3xl transition-colors relative",
+          active && "bg-[#f7ffd0] hover:bg-[#f7ffd0]"
         )}
         to={to}
       >
+        <div
+          className={cn(
+            "absolute -right-3 top-1/2 transition-colors h-8 w-4 -translate-y-1/2",
+            active && "bg-[#f7ffd0]"
+          )}
+        ></div>
         <div className="flex gap-x-4">
           <div className="size-10 rounded-full overflow-hidden">
             <img

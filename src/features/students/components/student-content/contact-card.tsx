@@ -1,14 +1,20 @@
+import { Card, CardContent, CardHeader } from "~/components/ui/card";
+
 export const ContactCard = () => {
   return (
-    <div className="bg-white/50 h-[400px] p-4 rounded-3xl">
-      <p className="text-lg font-medium">Contact</p>
-      <ul className="flex flex-col gap-y-3 mt-3">
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-      </ul>
-    </div>
+    <Card className="bg-white/50 p-4">
+      <CardHeader className="p-0 pb-4">
+        <p className="text-lg font-medium">Contact</p>
+      </CardHeader>
+      <CardContent className="p-0">
+        <ul className="flex flex-col gap-y-3">
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+        </ul>
+      </CardContent>
+    </Card>
   );
 };
 

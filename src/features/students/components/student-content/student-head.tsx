@@ -3,7 +3,7 @@ import { Button } from "~/components/ui/button";
 
 export const StudentHead = () => {
   return (
-    <div className="text-black relative p-4">
+    <div className="text-black">
       <div className="flex flex-wrap gap-1 items-center">
         <Button>
           <CiChat1 className="size-4 text-black/70 mr-2" />

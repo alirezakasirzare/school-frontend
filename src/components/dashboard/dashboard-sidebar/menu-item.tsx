@@ -15,8 +15,8 @@ export const MenuItem = ({ text, icon, to }: Props) => {
       <Link
         to={to}
         className={cn(
-          "flex items-center gap-x-2 rounded-full p-0.5 transition-colors",
-          isActive && "bg-[#edff8c]"
+          "flex items-center gap-x-2 rounded-full p-0.5 transition-colors hover:bg-black/5",
+          isActive && "bg-[#edff8c] hover:bg-[#edff8c]"
         )}
       >
         <span className="size-9 border border-black/10 rounded-full flex items-center justify-center">

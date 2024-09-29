@@ -4,35 +4,39 @@ import { GoPlus } from "react-icons/go";
 
 import { Button } from "~/components/ui/button";
 import { StudentItem } from "./student-item";
+import { Card, CardContent, CardHeader } from "~/components/ui/card";
 
 export const StudentsList = () => {
   const { studentId } = useParams();
 
   return (
-    <div className="w-[300px]">
-      <div className="bg-white/40 rounded-3xl">
-        {/* head */}
-        <div className="h-20 flex items-center px-4 gap-x-1">
-          <h6 className="font-bold text-lg">Students</h6>
+    <Card className="bg-neutral-200 w-[300px] shrink-0 max-h-[calc(100vh-80px)] h-min min-h-[600px] sticky top-[64px]">
+      {/* head */}
+      <CardHeader className="flex items-center gap-x-1">
+        <h6 className="font-bold text-lg">Students</h6>
 
-          <Button size={"icon"} className="ml-auto">
-            <GoPlus />
-          </Button>
+        <Button size={"icon"} className="ml-auto">
+          <GoPlus />
+        </Button>
 
-          <Button size={"icon"}>
-            <CiSearch />
-          </Button>
-        </div>
+        <Button size={"icon"}>
+          <CiSearch />
+        </Button>
+      </CardHeader>
 
-        {/* list */}
-        <ul className="pb-1 px-1 flex flex-col gap-y-1">
+      {/* list */}
+      <CardContent>
+        <ul className="flex flex-col gap-y-1">
           <StudentItem to="/students/1" active={studentId === "1"} />
           <StudentItem to="/students/2" active={studentId === "2"} />
           <StudentItem to="/students/3" active={studentId === "3"} />
           <StudentItem to="/students/4" active={studentId === "4"} />
           <StudentItem to="/students/5" active={studentId === "5"} />
+          <StudentItem to="/students/5" active={studentId === "6"} />
+          <StudentItem to="/students/5" active={studentId === "7"} />
+          <StudentItem to="/students/5" active={studentId === "8"} />
         </ul>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 };

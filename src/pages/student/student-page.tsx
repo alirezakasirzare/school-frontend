@@ -3,7 +3,7 @@ import { StudentsList } from "../../features/students/components/students-list";
 
 export const StudentPage = () => {
   return (
-    <div className="flex gap-x-1">
+    <div className="flex gap-x-1 min-h-full">
       <StudentsList />
       <div className="grow">
         <Outlet />

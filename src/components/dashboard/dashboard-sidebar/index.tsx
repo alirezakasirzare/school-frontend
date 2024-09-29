@@ -8,7 +8,7 @@ import { CiHeart, CiChat1 } from "react-icons/ci";
 
 export const DashboardSidebar = () => {
   return (
-    <aside className="flex flex-col gap-y-4 pt-6">
+    <aside className="flex flex-col gap-y-4 pt-6 fixed top-[64px] w-[200px]">
       <h6 className="text-xl font-semibold pl-2">Menu</h6>
       <MenuList
         label="Dashboard"

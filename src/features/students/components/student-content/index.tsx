@@ -1,18 +1,24 @@
+import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { ContactCard } from "./contact-card";
 import { StudentHead } from "./student-head";
 
 export const StudentContent = () => {
   return (
-    <div className="w-full rounded-3xl min-h-full relative overflow-hidden">
-      <div className="absolute bg-gradient-to-br from-[#efff99] to-[#f5d3c4] inset-0 size-full"></div>
-      <div className="absolute bg-gradient-to-r from-[#efff99]/30 to-[#fff]/30 inset-0 size-full"></div>
-      <StudentHead />
+    <Card className="grow bg-gradient-to-r from-[#f7ffd0] to-[#daf854] h-full">
+      <CardHeader>
+        <StudentHead />
+      </CardHeader>
 
-      <div className="grid grid-cols-3 relative mt-2 gap-x-1 px-1">
-        <ContactCard />
-        <ContactCard />
-        <ContactCard />
-      </div>
-    </div>
+      <CardContent>
+        <div className="grid grid-cols-3 gap-x-1">
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+        </div>
+      </CardContent>
+    </Card>
   );
 };

@@ -4,7 +4,7 @@ import { StudentHead } from "./student-head";
 
 export const StudentContent = () => {
   return (
-    <Card className="grow bg-gradient-to-r from-[#f7ffd0] to-[#daf854] h-full">
+    <Card className="grow bg-gradient-to-r from-[#f7ffd0] to-[#daf854]">
       <CardHeader>
         <StudentHead />
       </CardHeader>

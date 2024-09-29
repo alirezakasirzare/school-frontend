@@ -5,6 +5,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { TbBoxMultiple } from "react-icons/tb";
 import { GoPencil, GoHome } from "react-icons/go";
 import { CiHeart, CiChat1 } from "react-icons/ci";
+import { HiOutlineBookOpen } from "react-icons/hi2";
 
 export const DashboardSidebar = () => {
   return (
@@ -63,6 +64,11 @@ export const DashboardSidebar = () => {
             text: "fields of study",
             to: "fields",
             icon: <TbBoxMultiple className="size-4 text-black/70" />,
+          },
+          {
+            text: "lessions",
+            to: "lessions",
+            icon: <HiOutlineBookOpen className="size-4 text-black/70" />,
           },
         ]}
       />

@@ -1,22 +1,46 @@
+import { CiChat1 } from "react-icons/ci";
+import { Button } from "~/components/ui/button";
+
 export const StudentHead = () => {
   return (
     <div className="text-black relative p-4">
-      <div className="flex gap-x-1">
-        <button className="border border-black/20 text-sm px-6 py-2 rounded-3xl text-black">
+      <div className="flex flex-wrap gap-1 items-center">
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
           Chat
-        </button>
-        <button className="border border-black/20 text-sm px-6 py-2 rounded-3xl text-black">
-          Karname
-        </button>
-        <button className="border border-black/20 text-sm px-6 py-2 rounded-3xl text-black">
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Contact
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Score
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Parent
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Teachers
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Lessions
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Exams
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
+          Field Of Study
+        </Button>
+        <Button>
+          <CiChat1 className="size-4 text-black/70 mr-2" />
           Delete
-        </button>
-        <button className="border border-black/20 text-sm px-6 py-2 rounded-3xl text-black">
-          hello
-        </button>
-        <button className="border border-black/20 text-sm px-6 py-2 rounded-3xl text-black">
-          hello
-        </button>
+        </Button>
       </div>
       <div className="mt-4">
         <div className="flex gap-x-6">

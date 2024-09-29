@@ -1,7 +1,9 @@
+import { useParams } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
+
+import { Button } from "~/components/ui/button";
 import { StudentItem } from "./student-item";
-import { useParams } from "react-router-dom";
 
 export const StudentsList = () => {
   const { studentId } = useParams();
@@ -13,17 +15,13 @@ export const StudentsList = () => {
         <div className="h-20 flex items-center px-4 gap-x-1">
           <h6 className="font-bold text-lg">Students</h6>
 
-          <button className="size-10 border rounded-full border-black/10 flex justify-center items-center ml-auto">
-            <CiSearch className="size-4 text-black/70" />
-          </button>
+          <Button size={"icon"} className="ml-auto">
+            <GoPlus />
+          </Button>
 
-          <button className="size-10 border rounded-full border-black/10 flex justify-center items-center">
-            <CiSearch className="size-4 text-black/70" />
-          </button>
-
-          <button className="size-10 border rounded-full border-black/10 flex justify-center items-center">
-            <GoPlus className="size-4 text-black/70" />
-          </button>
+          <Button size={"icon"}>
+            <CiSearch />
+          </Button>
         </div>
 
         {/* list */}

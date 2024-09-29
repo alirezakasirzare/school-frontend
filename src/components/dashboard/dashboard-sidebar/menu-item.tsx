@@ -1,25 +1,28 @@
-import { Link } from "react-router-dom";
-import { GoHome } from "react-icons/go";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "../../../lib/utils";
 
 type Props = {
-  active?: boolean;
+  text?: string;
+  icon?: React.ReactNode;
+  to: string;
 };
 
-export const MenuItem = ({ active = false }: Props) => {
+export const MenuItem = ({ text, icon, to }: Props) => {
+  const { pathname } = useLocation();
+  const isActive = to === "/" ? pathname === to : pathname.includes(to);
   return (
     <li>
       <Link
-        to={"/"}
+        to={to}
         className={cn(
-          "flex items-center gap-x-2 rounded-full p-0.5",
-          active && "bg-[#edff8c]"
+          "flex items-center gap-x-2 rounded-full p-0.5 transition-colors",
+          isActive && "bg-[#edff8c]"
         )}
       >
         <span className="size-9 border border-black/10 rounded-full flex items-center justify-center">
-          <GoHome className="size-4 text-black/70" />
+          {icon}
         </span>
-        <span className="text-sm">Menu Item</span>
+        <span className="text-sm capitalize">{text}</span>
       </Link>
     </li>
   );

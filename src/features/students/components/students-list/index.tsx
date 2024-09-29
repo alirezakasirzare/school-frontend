@@ -1,8 +1,11 @@
 import { CiSearch } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
 import { StudentItem } from "./student-item";
+import { useParams } from "react-router-dom";
 
 export const StudentsList = () => {
+  const { studentId } = useParams();
+
   return (
     <div className="w-[300px]">
       <div className="bg-white/40 rounded-3xl">
@@ -25,11 +28,11 @@ export const StudentsList = () => {
 
         {/* list */}
         <ul className="pb-1 px-1 flex flex-col gap-y-1">
-          <StudentItem />
-          <StudentItem active />
-          <StudentItem />
-          <StudentItem />
-          <StudentItem />
+          <StudentItem to="/students/1" active={studentId === "1"} />
+          <StudentItem to="/students/2" active={studentId === "2"} />
+          <StudentItem to="/students/3" active={studentId === "3"} />
+          <StudentItem to="/students/4" active={studentId === "4"} />
+          <StudentItem to="/students/5" active={studentId === "5"} />
         </ul>
       </div>
     </div>

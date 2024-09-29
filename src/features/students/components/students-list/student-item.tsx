@@ -3,17 +3,18 @@ import { cn } from "../../../../lib/utils";
 
 type Props = {
   active?: boolean;
+  to: string;
 };
 
-export const StudentItem = ({ active }: Props) => {
+export const StudentItem = ({ active = false, to }: Props) => {
   return (
     <li>
       <Link
         className={cn(
-          "bg-white/30 block p-4 rounded-3xl",
+          "bg-white/30 block p-4 rounded-3xl transition-colors",
           active && "bg-gradient-to-tr from-[#f7ffd0] to-[#edff8c]"
         )}
-        to={"/"}
+        to={to}
       >
         <div className="flex gap-x-4">
           <div className="size-10 rounded-full overflow-hidden">
